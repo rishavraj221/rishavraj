@@ -1,0 +1,264 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 5%;
+}
+
+.headerBtns {
+  display: flex;
+  align-items: center;
+}
+
+.headerBtn,
+.headerBtn2 {
+  font-family: "Alkatra-Regular";
+  font-size: 18px;
+  color: #141c3a;
+  border-radius: 50px;
+  padding: 8px 15px;
+  margin: 0 15px;
+  transition: all 0.2s ease-in-out;
+}
+.headerBtn:hover,
+.headerBtn2 {
+  color: #6e07f3;
+  cursor: pointer;
+}
+
+.headerBtn2 {
+  border: 2px solid #6e07f3;
+  color: #6e07f3;
+  background-color: transparent;
+}
+.headerBtn2:hover {
+  background-color: #6e07f3;
+  color: white;
+}
+
+.hero {
+  flex-grow: 1;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 6rem 5%;
+  align-items: center;
+}
+
+.heroHeader {
+  color: #141c3a;
+  font-family: "Alkatra-Bold";
+  font-size: 40px;
+  text-align: center;
+  padding: 15px 0;
+  width: 70%;
+}
+.heroSubHeader {
+  color: rgba(10, 10, 10, 0.9);
+  font-family: "Alkatra-Regular";
+  font-size: 20px;
+  text-align: center;
+  padding: 25px 0;
+  width: 70%;
+}
+.heroImage {
+  padding: 30px 0;
+}
+
+.section2 {
+  padding: 50px 5%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #6e07f3;
+  padding-bottom: 200px;
+}
+
+.devAnimation {
+  width: 40%;
+}
+
+.bio {
+  width: 45%;
+}
+
+.bioHeader {
+  color: white;
+  font-family: "Alkatra-Bold";
+  font-size: 30px;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.bioSubHeader {
+  color: white;
+  font-family: "Alkatra-Variable";
+  font-size: 18px;
+  padding: 20px 0;
+  text-align: center;
+  font-weight: 200;
+}
+
+.section4 {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 5%;
+  margin-top: -150px;
+  background-color: white;
+  border-radius: 25px;
+  border: 1px solid #e6ecf8;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.kns {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 33.33%;
+}
+
+.knIcon {
+  background-color: rgb(255, 142, 58);
+  border-radius: 10px;
+  padding: 15px;
+  margin: 25px 0;
+}
+
+.knsHeader {
+  font-family: "Alkatra-Variable";
+  font-weight: 600;
+  font-size: 26px;
+  padding: 25px 0 35px 0;
+  text-align: center;
+  color: #141c3a;
+}
+
+.knsDesc {
+  font-family: "Alkatra-Variable";
+  font-weight: 200;
+  font-size: 18px;
+  padding: 15px;
+  text-align: center;
+  color: #141c3a;
+  height: 180px;
+}
+
+.knsL {
+  padding: 15px 0;
+}
+
+.knsLHeader {
+  color: #6e07f3;
+  font-family: "Alkatra-Variable";
+  font-weight: 200;
+  font-size: 18px;
+  padding: 15px;
+  text-align: center;
+}
+
+.dlvK {
+  color: #141c3a;
+  font-family: "Alkatra-Variable";
+  font-weight: 200;
+  font-size: 18px;
+  text-align: center;
+}
+
+.section5 {
+  margin: 150px 5%;
+  display: "flex";
+  flex-direction: "column";
+  align-items: "center";
+}
+
+.pjHeader,
+.pjDesc {
+  color: #141c3a;
+  font-family: "Alkatra-Variable";
+  font-weight: 600;
+  font-size: 30px;
+  text-align: center;
+}
+
+.pjDesc {
+  font-weight: 200;
+  font-size: 20px;
+}
+
+.prContainer {
+  position: relative;
+  overflow: hidden;
+  height: 260px;
+  width: 100%;
+  border-radius: 12px;
+}
+
+.prContent {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.45s ease;
+  color: white;
+  background-color: #141c3a;
+  height: 100%;
+  width: 100%;
+  padding: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.prContainer img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s;
+}
+
+.prContainer:hover img {
+  transform: scale(1.2);
+}
+
+.prContainer:hover .prContent {
+  opacity: 1;
+}
+
+.prContentText {
+  font-family: "Alkatra-Variable";
+  font-weight: 200;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.prContentBtn {
+  padding: 15px 35px;
+  border: 1px solid #6e07f3;
+  background-color: transparent;
+  border-radius: 50px;
+  color: white;
+  font-family: "Alkatra-Variable";
+  font-size: 16px;
+  font-weight: 200;
+  transition: all 0.2s ease-in-out;
+}
+
+.prContentBtn:hover {
+  background-color: #6e07f3;
+  cursor: pointer;
+}
+
+.projectGrid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 25px;
+  margin: 100px 0;
+}
+
+/* rgb(255, 142, 58) */
+
+@media (max-width: 800px) {
+}

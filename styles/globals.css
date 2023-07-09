@@ -1,0 +1,158 @@
+html,
+body {
+  padding: 0;
+  scroll-behavior: smooth;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  color-scheme: light;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.ReactModal__Overlay {
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: all 500ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+  transform: translateY(-100px);
+}
+
+@font-face {
+  font-family: "RoseVelt";
+  src: url("../fonts/RoseVelt.ttf");
+}
+
+@font-face {
+  font-family: "Alkatra-Bold";
+  src: url("../fonts/Alkatra/static/Alkatra-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Alkatra-Medium";
+  src: url("../fonts/Alkatra/static/Alkatra-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Alkatra-Regular";
+  src: url("../fonts/Alkatra/static/Alkatra-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Alkatra-SemiBold";
+  src: url("../fonts/Alkatra/static/Alkatra-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "Alkatra-Variable";
+  src: url("../fonts/Alkatra/Alkatra-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: "Poppins-Black";
+  src: url("../fonts/Poppins/Poppins-Black.ttf");
+}
+
+@font-face {
+  font-family: "Poppins-BlackItalic";
+  src: url("../fonts/Poppins/Poppins-BlackItalic.ttf");
+}
+
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url("../fonts/Poppins/Poppins-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Poppins-BoldItalic";
+  src: url("../fonts/Poppins/Poppins-BoldItalic.ttf");
+}
+
+@font-face {
+  font-family: "Poppins-ExtraBold";
+  src: url("../fonts/Poppins/Poppins-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: "Poppins-ExtraBoldItalic";
+  src: url("../fonts/Poppins/Poppins-ExtraBoldItalic.ttf");
+}
+
+@font-face {
+  font-family: "Poppins-Italic";
+  src: url("../fonts/Poppins/Poppins-Italic.ttf");
+}
+
+@font-face {
+  font-family: "Poppins-Light";
+  src: url("../fonts/Poppins/Poppins-Light.ttf");
+}
+
+@font-face {
+  font-family: "Poppins-LightItalic";
+  src: url("../fonts/Poppins/Poppins-LightItalic.ttf");
+}
+
+@font-face {
+  font-family: "Poppins-Medium";
+  src: url("../fonts/Poppins/Poppins-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Poppins-MediumItalic";
+  src: url("../fonts/Poppins/Poppins-MediumItalic.ttf");
+}
+
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url("../fonts/Poppins/Poppins-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url("../fonts/Poppins/Poppins-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "Poppins-SemiBoldItalic";
+  src: url("../fonts/Poppins/Poppins-SemiBoldItalic.ttf");
+}
+
+@font-face {
+  font-family: "Poppins-Thin";
+  src: url("../fonts/Poppins/Poppins-Thin.ttf");
+}
+
+@font-face {
+  font-family: "Poppins-ThinItalic";
+  src: url("../fonts/Poppins/Poppins-ThinItalic.ttf");
+}
+
+/* @media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+} */
