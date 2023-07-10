@@ -337,7 +337,7 @@ const Home = () => {
         <section id="projects" className={styles.section5}>
           <h1 className={styles.pjHeader}>My Recent Works</h1>
           <h2 className={styles.pjDesc}>
-            Here are a few past design projects I've worked on. Want to see
+            Here are a few past development projects I've worked on. Want to see
             more?{" "}
             <a href={`mailto:${pageData.email}`} target="_blank">
               <span style={{ color: "blue" }} className="pointer">
