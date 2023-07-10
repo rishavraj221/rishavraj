@@ -4,6 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import Modal from "react-modal";
 import Lottie from "lottie-react";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 import useWindowDimensions from "../hooks/useWindowDimensions";
 import styles from "../styles/Home.module.css";
@@ -39,6 +41,7 @@ const wid_break = 800;
 
 const pageData = {
   email: "rairishav221@gmail.com",
+  linkedIn: "https://www.linkedin.com/in/rishav-raj-2639341a5/",
 };
 
 // knowledge and skills data
@@ -132,35 +135,88 @@ const ksData = [
 const projectsData = [
   {
     img: "roots",
-    desc: "High-end, custom residential renovaters serving Fraser Valley homeowners.",
-  },
-  {
-    img: "digital_outcomes",
-    desc: "High-end, custom residential renovaters serving Fraser Valley homeowners.",
-  },
-  {
-    img: "alfalgo",
-    desc: "High-end, custom residential renovaters serving Fraser Valley homeowners.",
-  },
-  {
-    img: "beekle",
-    desc: "High-end, custom residential renovaters serving Fraser Valley homeowners.",
-  },
-  {
-    img: "eminent",
-    desc: "High-end, custom residential renovaters serving Fraser Valley homeowners.",
+    desc: "Robust web and mobile applications for supply chain management",
+    href: "https://rootsagrifoodtech.com",
+    target: "_blank",
   },
   {
     img: "eduvisory",
-    desc: "High-end, custom residential renovaters serving Fraser Valley homeowners.",
+    desc: "Student consultation and counseling website for personalized support and academic guidance.",
+    href: "",
+    target: "_self",
+  },
+  {
+    img: "eminent",
+    desc: "Interior design experiences with an immersive website showcasing stunning portfolios.",
+    href: "https://eminentmaster.gatsbyjs.io/",
+    target: "_blank",
+  },
+  {
+    img: "fastail",
+    desc: "E-commerce through a mobile application that leverages reels to enhance product discovery and engagement.",
+    href: "",
+    target: "_self",
+  },
+  {
+    img: "alfalgo",
+    desc: "Strategy builder and backtesting website to optimize trading decisions based on historical market data.",
+    href: "http://alfalgo.com/",
+    target: "_blank",
+  },
+  {
+    img: "digital_outcomes",
+    desc: "Sentiment analysis website with speech-to-text capabilities real-time emotion recognition.",
+    href: "https://www.digitaloutcomes.io/",
+    target: "_blank",
   },
 ];
 
+const testimonialData = [
+  {
+    img: "vinayak.png",
+    text: "It has been an absolute joy working with Rishav. His proficiency in site building and attention to details are simply amazing. He regularly outperformed our expectations and provided great outcomes. I highly recommend Rishav for any project.",
+    name: "Vinayak SK",
+    designation: "Director, Roots",
+  },
+  {
+    img: "venkat_sir.jpeg",
+    text: "I am extremely impressed with Rishav's skills and professionalism. He was able to translate our vision into a stunning web application. His ability to problem-solve and provide creative solutions is truly commendable. I look forward to working with him again in the future.",
+    name: "Venkatraman J",
+    designation: "London, Good Kind",
+  },
+  {
+    img: "ananth_fastail.jpeg",
+    text: "Rishav's expertise in full-stack development is truly remarkable. His ability to seamlessly integrate front-end and back-end functionalities is commendable. It was a pleasure working with him, and I would gladly do so again in the future.",
+    name: "Anantha P",
+    designation: "Founder, Fastail",
+  },
+];
+
+const responsive = {
+  superLargeDesktop: {
+    // the naming can be any, depends on you.
+    breakpoint: { max: 4000, min: 3000 },
+    items: 1,
+  },
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 1,
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 1,
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1,
+  },
+};
+
 const Home = () => {
-  const [eventTab, setEventTab] = useState(0);
   const { width } = useWindowDimensions();
 
   const [modalIsOpen, setIsOpen] = useState(false);
+  const [iconHover, setIconHover] = useState(false);
 
   function openModal() {
     setIsOpen(true);
@@ -195,9 +251,9 @@ const Home = () => {
             <Link href="#projects" scroll={false}>
               <div className={styles.headerBtn}>Projects</div>
             </Link>
-            <Link href="#contactUs" scroll={false}>
+            <a href={`mailto:${pageData.email}`} scroll={false}>
               <div className={styles.headerBtn2}>Contact Me</div>
-            </Link>
+            </a>
           </div>
         </header>
 
@@ -283,15 +339,11 @@ const Home = () => {
           <h2 className={styles.pjDesc}>
             Here are a few past design projects I've worked on. Want to see
             more?{" "}
-            <Link
-              href={`mailto:${pageData.email}`}
-              target="_blank"
-              referrerPolicy="no-referrer"
-            >
+            <a href={`mailto:${pageData.email}`} target="_blank">
               <span style={{ color: "blue" }} className="pointer">
                 Email me
               </span>
-            </Link>
+            </a>
             .
           </h2>
 
@@ -304,18 +356,14 @@ const Home = () => {
                   alt={"project"}
                 />
                 <div className={styles.prContent}>
-                  <div className={styles.prContentText}>
-                    High-end, custom residential renovaters serving Fraser
-                    Valley homeowners.
-                  </div>
-                  <button
+                  <div className={styles.prContentText}>{pd.desc}</div>
+                  <a
+                    href={pd.href}
+                    target={pd.target}
                     className={styles.prContentBtn}
-                    onClick={() =>
-                      alert("Building the content, thanks for your patience!")
-                    }
                   >
                     Know More
-                  </button>
+                  </a>
                 </div>
               </div>
             ))}
@@ -327,15 +375,79 @@ const Home = () => {
           <h2 className={styles.pjDesc}>
             People I've worked with have said some nice things...
           </h2>
+          <Carousel
+            className={styles.carousel}
+            responsive={responsive}
+            arrows={false}
+            showDots={true}
+          >
+            {testimonialData.map((td, i) => (
+              <div key={i} className={styles.testimonialContainer}>
+                <div className={styles.testimonialImage}>
+                  <Image
+                    src={`/testimonials/${td.img}`} // Route of the image file
+                    width={100}
+                    height={100}
+                    alt={"project"}
+                  />
+                </div>
+                <div className={styles.testimonialText}>{`"${td.text}"`}</div>
+
+                <div className={styles.testimonialAuthor}>{td.name}</div>
+                <div className={styles.taDesignation}>{td.designation}</div>
+              </div>
+            ))}
+          </Carousel>
         </section>
 
-        <section
-          id="sponsors"
-          className={styles.section6}
-          style={{ marginTop: width > wid_break ? 0 : 0 }}
-        ></section>
+        <section className={styles.footerHead}>
+          <div className={styles.fhH1}>Hire me!</div>
+          <div className={styles.fhH2Cont}>
+            <div className={styles.fhH2}>
+              Interested in working together? Let's schedule a time to chat.
+            </div>
+          </div>
+          <div className={styles.fhBtnCont}>
+            <a
+              href={`mailto:${pageData.email}`}
+              target="_blank"
+              className={styles.fhBtn}
+            >
+              Let's do this
+            </a>
+          </div>
+        </section>
 
-        <footer id="contactUs" className={styles.footer}></footer>
+        <div className={styles.footerTop} />
+        <footer className={styles.footer}>
+          <a href="#" className={styles.footerLogo}>
+            <Image
+              src="/images/logo2.svg" // Route of the image file
+              height={width > wid_break ? 55 : 30} // Desired size with correct aspect ratio
+              width={width > wid_break ? 80 : 45} // Desired size with correct aspect ratio
+              alt="Rishav Raj"
+              className="pointer"
+            />
+          </a>
+          <div className={styles.footerSlogan}>
+            Living, learning, & embracing new challenges every day.
+          </div>
+          <a
+            href={pageData.linkedIn}
+            target="_blank"
+            className={styles.footerIcon}
+            onMouseEnter={() => setIconHover(true)}
+            onMouseLeave={() => setIconHover(false)}
+          >
+            <Image
+              src={`/icons/linkedin${iconHover ? "" : "2"}.svg`} // Route of the image file
+              height={width > wid_break ? 20 : 20} // Desired size with correct aspect ratio
+              width={width > wid_break ? 20 : 20} // Desired size with correct aspect ratio
+              alt="LinkedIn"
+            />
+          </a>
+          <div className={styles.fH3}>Handcrafted by me @2023</div>
+        </footer>
       </main>
     </div>
   );
