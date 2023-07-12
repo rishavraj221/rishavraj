@@ -42,6 +42,7 @@ const wid_break = 800;
 const pageData = {
   email: "rairishav221@gmail.com",
   linkedIn: "https://www.linkedin.com/in/rishav-raj-2639341a5/",
+  github: "https://github.com/rishavraj221",
 };
 
 // knowledge and skills data
@@ -54,7 +55,14 @@ const ksData = [
     l: [
       {
         key: "Technologies I specialize in",
-        value: ["React JS", "Next JS", "Gatsby JS", "HTML / CSS"],
+        value: [
+          "ReactJS / NextJS / GatsbyJS",
+          "Typescript",
+          "Material UI",
+          "Angular",
+          "HTML / CSS",
+          "Bootstrap / Tailwind",
+        ],
       },
       {
         key: "Styling",
@@ -62,7 +70,13 @@ const ksData = [
       },
       {
         key: "Tools",
-        value: ["VS Code", "Git", "GitHub", "Browser Dev Tools", "Terminal"],
+        value: [
+          "VS Code",
+          "git",
+          "npm / yarn / pip / brew",
+          "GitHub",
+          "Browser Dev Tools",
+        ],
       },
     ],
   },
@@ -74,7 +88,7 @@ const ksData = [
     l: [
       {
         key: "Technologies I work with",
-        value: ["React Native", "Expo"],
+        value: ["React Native / Expo", "Flutter"],
       },
       {
         key: "UI Libraries",
@@ -84,9 +98,9 @@ const ksData = [
         key: "Tools",
         value: [
           "Android Studio",
+          "Google Play Console",
           "Xcode",
           "App Store Connect",
-          "Google Play Console",
         ],
       },
     ],
@@ -99,26 +113,27 @@ const ksData = [
     l: [
       {
         key: "Technologies I excel in",
-        value: ["JavaScript", "Node.js", "Python", "Java"],
+        value: [
+          "JavaScript / Node.js",
+          "Express JS",
+          "Content Management System",
+          "GraphQL",
+          "Python / Flask",
+          "Java",
+        ],
       },
       {
         key: "Databases",
-        value: [
-          "DynamoDB",
-          "MongoDB",
-          "PostgresSQL",
-          "AWS Athena",
-          "AWS Timestream",
-        ],
+        value: ["DynamoDB / MongoDB", "PostgresSQL / Athena / Timestream"],
       },
       {
         key: "Cloud Services",
         value: [
-          "AWS EC2",
+          "EC2",
           "S3",
           "Lambda",
           "API Gateway",
-          "Cognito",
+          "Amplify / Cognito",
           "Firebase",
           "Cloudinary",
           "and many more...",
@@ -166,8 +181,8 @@ const projectsData = [
   {
     img: "digital_outcomes",
     desc: "Sentiment analysis website with speech-to-text capabilities real-time emotion recognition.",
-    href: "https://www.digitaloutcomes.io/",
-    target: "_blank",
+    href: "",
+    target: "_self",
   },
 ];
 
@@ -248,6 +263,9 @@ const Home = () => {
             />
           </Link>
           <div className={styles.headerBtns}>
+            <Link href="#skills" scroll={false}>
+              <div className={styles.headerBtn}>knowledge & Skills</div>
+            </Link>
             <Link href="#projects" scroll={false}>
               <div className={styles.headerBtn}>Projects</div>
             </Link>
@@ -303,7 +321,7 @@ const Home = () => {
           </section>
         </section>
 
-        <section className={styles.section4}>
+        <section id="skills" className={styles.section4}>
           {ksData.map((d, i) => (
             <div
               key={i}
@@ -420,7 +438,7 @@ const Home = () => {
 
         <div className={styles.footerTop} />
         <footer className={styles.footer}>
-          <a href="#" className={styles.footerLogo}>
+          <a title="Logo" href="#" className={styles.footerLogo}>
             <Image
               src="/images/logo2.svg" // Route of the image file
               height={width > wid_break ? 55 : 30} // Desired size with correct aspect ratio
@@ -433,6 +451,7 @@ const Home = () => {
             Living, learning, & embracing new challenges every day.
           </div>
           <a
+            title="LinkedIn"
             href={pageData.linkedIn}
             target="_blank"
             className={styles.footerIcon}
@@ -446,7 +465,7 @@ const Home = () => {
               alt="LinkedIn"
             />
           </a>
-          <div className={styles.fH3}>Handcrafted by me @2023</div>
+          <div className={styles.fH3}>Handcrafted by me ©2023</div>
         </footer>
       </main>
     </div>
