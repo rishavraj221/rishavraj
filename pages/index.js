@@ -188,16 +188,16 @@ const projectsData = [
 
 const testimonialData = [
   {
+    img: "venkat_sir.jpeg",
+    text: "Its been an absolute pleasure working with Rishav on three projects. His overall in depth skills with Backend and Frontend technologies helped us release projects on time. His enthusiasm over solving complex problems is worth a shout out. He would be a great asset to any team. Happy to work with Rishav in future too.",
+    name: "Venkatraman J",
+    designation: "Co-founder / CTO, Beekle.ai",
+  },
+  {
     img: "vinayak.png",
     text: "It has been an absolute joy working with Rishav. His proficiency in site building and attention to details are simply amazing. He regularly outperformed our expectations and provided great outcomes. I highly recommend Rishav for any project.",
     name: "Vinayak SK",
     designation: "Director, Roots",
-  },
-  {
-    img: "venkat_sir.jpeg",
-    text: "I am extremely impressed with Rishav's skills and professionalism. He was able to translate our vision into a stunning web application. His ability to problem-solve and provide creative solutions is truly commendable. I look forward to working with him again in the future.",
-    name: "Venkatraman J",
-    designation: "London, Good Kind",
   },
   {
     img: "ananth_fastail.jpeg",
