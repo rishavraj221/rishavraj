@@ -191,19 +191,22 @@ const testimonialData = [
     img: "venkat_sir.jpeg",
     text: "Its been an absolute pleasure working with Rishav on three projects. His overall in depth skills with Backend and Frontend technologies helped us release projects on time. His enthusiasm over solving complex problems is worth a shout out. He would be a great asset to any team. Happy to work with Rishav in future too.",
     name: "Venkatraman J",
+    href: "https://www.linkedin.com/in/venkatramanjeyaraman",
     designation: "Co-founder / CTO, Beekle.ai",
+  },
+  {
+    img: "ravi_bhaiya.jpeg",
+    text: "Rishav's expertise in full-stack development is truly remarkable. His ability to seamlessly integrate front-end and back-end functionalities is commendable. It was a pleasure working with him, and I would gladly do so again in the future.",
+    name: "Dr. Ravi Dadsena",
+    href: "https://www.linkedin.com/in/dr-ravi-dadsena-ph-d-700016a2",
+    designation: "Scientific Researcher, RWTH Uniklink Aachen",
   },
   {
     img: "vinayak.png",
     text: "It has been an absolute joy working with Rishav. His proficiency in site building and attention to details are simply amazing. He regularly outperformed our expectations and provided great outcomes. I highly recommend Rishav for any project.",
     name: "Vinayak SK",
+    href: "https://www.linkedin.com/in/vinayak-sk-18a64519a",
     designation: "Director, Roots",
-  },
-  {
-    img: "ananth_fastail.jpeg",
-    text: "Rishav's expertise in full-stack development is truly remarkable. His ability to seamlessly integrate front-end and back-end functionalities is commendable. It was a pleasure working with him, and I would gladly do so again in the future.",
-    name: "Anantha P",
-    designation: "Founder, Fastail",
   },
 ];
 
@@ -310,13 +313,12 @@ const Home = () => {
               Hi, I'm Rishav Raj. Nice to meet you.
             </div>
             <div className={styles.bioSubHeader}>
-              With 2 years of experience, I'm a dedicated developer and lifelong
-              learner. I've worked on diverse projects, collaborating with teams
-              to build innovative web and mobile applications. Constantly
-              expanding my skills, I strive to create seamless user experiences
-              and solve complex coding challenges. Passionate about my craft,
-              I'm always eager to take on new opportunities and grow as a
-              developer.
+              I'm a dedicated developer and lifelong learner. I've worked on
+              diverse projects, collaborating with teams to build innovative web
+              and mobile applications. Constantly expanding my skills, I strive
+              to create seamless user experiences and solve complex coding
+              challenges. Passionate about my craft, I'm always eager to take on
+              new opportunities and grow as a developer.
             </div>
           </section>
         </section>
@@ -411,7 +413,13 @@ const Home = () => {
                 </div>
                 <div className={styles.testimonialText}>{`"${td.text}"`}</div>
 
-                <div className={styles.testimonialAuthor}>{td.name}</div>
+                <a
+                  href={td.href}
+                  target="_blank"
+                  className={styles.testimonialAuthor}
+                >
+                  {td.name}
+                </a>
                 <div className={styles.taDesignation}>{td.designation}</div>
               </div>
             ))}
