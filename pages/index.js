@@ -88,7 +88,7 @@ const ksData = [
     l: [
       {
         key: "Technologies I work with",
-        value: ["React Native / Expo", "Flutter"],
+        value: ["React Native", "Expo"],
       },
       {
         key: "UI Libraries",
