@@ -201,13 +201,6 @@ const testimonialData = [
     href: "https://www.linkedin.com/in/dr-ravi-dadsena-ph-d-700016a2",
     designation: "Scientific Researcher, RWTH Uniklink Aachen",
   },
-  {
-    img: "vinayak.png",
-    text: "It has been an absolute joy working with Rishav. His proficiency in site building and attention to details are simply amazing. He regularly outperformed our expectations and provided great outcomes. I highly recommend Rishav for any project.",
-    name: "Vinayak SK",
-    href: "https://www.linkedin.com/in/vinayak-sk-18a64519a",
-    designation: "Director, Roots",
-  },
 ];
 
 const responsive = {
